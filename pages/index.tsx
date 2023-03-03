@@ -12,7 +12,7 @@ export default function Home() {
         Hello world!
       </h1>
       <ul>
-        <li><Link href="/mobile-height-unit">Mobile Height Unit</Link></li>
+        <li><Link href="https://jason71708.github.io/mobile-height-unit-demo/">Mobile Height Unit</Link></li>
         <li><Link href="/deeplink">DeepLink</Link></li>
       </ul>
     </div>
