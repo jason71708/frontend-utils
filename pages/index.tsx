@@ -8,7 +8,7 @@ export default function Home() {
         <title>{process.env.NEXT_PUBLIC_WEBSITE_TITLE}</title>
         <meta name="description" content="Many use case in frontend" />
       </Head>
-      <h1 className="text-3xl font-bold underline">
+      <h1 className="text-3xl font-bold my-4">
         Hello world!
       </h1>
       <ul>
