@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Head from "next/head"
+import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -14,7 +14,8 @@ export default function Home() {
       <ul>
         <li><Link href="https://jason71708.github.io/mobile-height-unit-demo/">Mobile Height Unit</Link></li>
         <li><Link href="/deeplink">DeepLink</Link></li>
+        <li><Link href="/virtual-scroll">Virtual Scroll</Link></li>
       </ul>
     </div>
-  )
+  );
 }
