@@ -1,17 +1,6 @@
 import React from "react";
 import PageTitle from "components/PageTitle";
-
-const fetchItems = (offset: number = 0, limit: number = 10) => {
-  return new Promise<string[]>(resolve => {
-    const items: string[] = [];
-    for (let i = offset; i < offset + limit; i++) {
-      items.push(`Index ${i}`);
-    }
-    setTimeout(() => {
-      resolve(items);
-    }, 1500);
-  });
-};
+import { fetchItems } from "utils";
 
 const LIMIT = 50;
 const BUFFER = LIMIT * 3;
