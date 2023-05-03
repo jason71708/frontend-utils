@@ -4,8 +4,8 @@ import { AppProps } from "next/app";
 
 const PageWithTransition = ({ Component, pageProps, router }: AppProps) => {
   const last = useRef(Component);
-
   const [transitioning, setTransitioning] = useState(false);
+
   useEffect(() => {
     const handler = () => {
       setTransitioning(true);

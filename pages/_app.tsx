@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app'
 import 'styles/globals.css'
-import PageWithTransition from "components/transitions/WithTransition";
+import WithTransition from "components/WithTransition";
 
 export default function App({ Component, pageProps, router }: AppProps) {
-  return <PageWithTransition
+  return <WithTransition
     Component={Component}
     pageProps={pageProps}
     router={router}
