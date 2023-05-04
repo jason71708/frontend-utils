@@ -1,46 +1,46 @@
 import React from "react";
-import PageTitle from "components/PageTitle";
+import DefaultPageLayout from "components/global/DefaultPageLayout";
 import { unbalanceFetchItems } from "utils";
 
 const LIMIT = 10;
 const ReactRaceCondition = () => {
   const [items, setItems] = React.useState<string[]>([]);
-  const [loading, setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(false);
   const [items2, setItems2] = React.useState<string[]>([]);
-  const [loading2, setLoading2] = React.useState(false)
-  const [page, setPage] = React.useState(0)
+  const [loading2, setLoading2] = React.useState(false);
+  const [page, setPage] = React.useState(0);
 
   React.useEffect(() => {
     setLoading(true);
     (async () => {
-      const items = await unbalanceFetchItems(page * LIMIT, LIMIT)
-      setItems(items)
+      const items = await unbalanceFetchItems(page * LIMIT, LIMIT);
+      setItems(items);
       setLoading(false);
     })();
-  }, [page])
+  }, [page]);
 
   React.useEffect(() => {
     setLoading2(true);
     let abort = false;
     (async () => {
-      const items = await unbalanceFetchItems(page * LIMIT, LIMIT)
+      const items = await unbalanceFetchItems(page * LIMIT, LIMIT);
       if (abort) return;
-      setItems2(items)
+      setItems2(items);
       setLoading2(false);
     })();
 
     // If using fetch API, AbortController can also cancel the request.
 
     return () => {
-      abort = true
-    }
-  }, [page])
+      abort = true;
+    };
+  }, [page]);
 
   return (
-    <div className="px-4">
-      <PageTitle title="Race Condition In React" />
-      <h1 className="text-3xl font-bold my-4">Race Condition In React</h1>
-      <p className="my-2">The first API response may arrive after the second API response, so the final state would be the first API response. It should only mutate the state by the last API.</p>
+    <DefaultPageLayout
+      title="Race Condition In React"
+      description="The first API response may arrive after the second API response, so the final state would be the first API response. It should only mutate the state by the last API."
+    >
       <button onClick={() => setPage(Math.max(page - 1, 0))} className="py-2 px-8">-</button>
       <span>Page: {page}</span>
       <button onClick={() => setPage(page + 1)} className="py-2 px-8">+</button>
@@ -64,8 +64,8 @@ const ReactRaceCondition = () => {
           </ol>
         </div>
       </div>
-    </div>
-  )
-}
+    </DefaultPageLayout>
+  );
+};
 
 export default ReactRaceCondition;

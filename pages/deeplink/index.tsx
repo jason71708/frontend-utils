@@ -1,15 +1,15 @@
-import React from "react"
-import PageTitle from "components/PageTitle"
+import React from "react";
+import DefaultPageLayout from "components/global/DefaultPageLayout";
 
 export default function DeepLink() {
-  const [text, setText] = React.useState('')
+  const [text, setText] = React.useState('');
   const [url, setUrl] = React.useState('');
 
   return (
-    <div className="px-4">
-      <PageTitle title="DeepLink" />
-      <h1 className="text-3xl font-bold my-4">DeepLink (Universal Link, App Link)</h1>
-      <p className="my-2">Deep linking is commonly used in mobile apps to allow users to jump directly to a specific part of the app, rather than having to navigate through menus and screens.</p>
+    <DefaultPageLayout
+      title="DeepLink"
+      description="Deep linking (Universal Link, App Link) is commonly used in mobile apps to allow users to jump directly to a specific part of the app, rather than having to navigate through menus and screens."
+    >
       <ul>
         <li className="underline"><a href="fb://facewebmodal/f?href=https://www.facebook.com" target="_blank">Facebook (fb://facewebmodal/f?href=https://www.facebook.com)</a></li>
         <li className="underline"><a href="fb://profile" target="_blank">Facebook - Open profile (fb://profile)</a></li>
@@ -32,6 +32,6 @@ export default function DeepLink() {
       <button onClick={() => setUrl(text)}>Set Url</button>
       <br />
       <a className="underline" href={url} target="_blank">Custom URL: {url}</a>
-    </div>
-  )
+    </DefaultPageLayout>
+  );
 }

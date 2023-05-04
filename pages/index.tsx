@@ -16,6 +16,7 @@ export default function Home() {
         <li><Link href="/deeplink">DeepLink</Link></li>
         <li><Link href="/virtual-scroll">Virtual Scroll</Link></li>
         <li><Link href="/race-condition-in-react">Race Condition In React</Link></li>
+        <li><Link href="/event-emitter">Event Emitter</Link></li>
       </ul>
     </div>
   );

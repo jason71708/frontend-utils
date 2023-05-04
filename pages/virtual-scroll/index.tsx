@@ -1,5 +1,5 @@
 import React from "react";
-import PageTitle from "components/PageTitle";
+import DefaultPageLayout from "components/global/DefaultPageLayout";
 import { fetchItems } from "utils";
 
 const LIMIT = 50;
@@ -86,10 +86,10 @@ const VirtualScroll = () => {
   }, [items]);
 
   return (
-    <div className="px-4">
-      <PageTitle title="Virtual Scroll" />
-      <h1 className="text-3xl font-bold my-4">Virtual Scroll</h1>
-      <p className="my-2">Combining the best from pagination and infinite scroll to enhance user experience and performance</p>
+    <DefaultPageLayout
+      title="Virtual Scroll"
+      description="Combining the best from pagination and infinite scroll to enhance user experience and performance"
+    >
       <div
         ref={overlayRef}
         className="border-black border-2"
@@ -104,7 +104,7 @@ const VirtualScroll = () => {
         ))}
         {isLoading === LoadingType.Next && <h3>Loading</h3>}
       </div>
-    </div>
+    </DefaultPageLayout>
   );
 };
 
