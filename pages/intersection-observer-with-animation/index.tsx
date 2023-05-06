@@ -48,6 +48,7 @@ const IntersetionObserverWithAnimation = () => {
       title="Intersetion Observer With Animation"
       description="Use the Intersection Observer API to trigger some animations when scrolling the page."
     >
+      <p className="my-2">Should check the compatibility if you want to support the old version browser.</p>
       <section className="h-screen bg-slate-800 grid place-items-center place-content-center">
         <div id={sectionIds[0]} ref={registerElementToObserver} className={`py-8 transition-all duration-700 ${intersectsStatus[sectionIds[0]] ? 'opacity-100' : 'opacity-0 -translate-x-full blur'}`}>
           <h2 className="text-6xl text-white">Hi, I am a software engineer!</h2>
