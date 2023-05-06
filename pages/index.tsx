@@ -17,6 +17,7 @@ export default function Home() {
         <li><Link href="/virtual-scroll">Virtual Scroll</Link></li>
         <li><Link href="/race-condition-in-react">Race Condition In React</Link></li>
         <li><Link href="/event-emitter">Event Emitter</Link></li>
+        <li><Link href="/intersection-observer-with-animation">Intersection Observer With Animation</Link></li>
       </ul>
     </div>
   );
